@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <!--Stylesheet-->
+    <link href="~/css/main.css" rel="stylesheet" />
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+
+<body>
+    <header>
+        <!--Gets the title from the index.cshtml page-->
+        <h1>@ViewBag.Title</h1>
+        <menu>
+            <ul>
+                <!--Link to other pages-->
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="gradeCal">Grade Calculator</a></li>
+            </ul>
+        </menu>
+    </header>
+    
+    @RenderBody()
+
+    <footer>Loves Ice Cream</footer>
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <!--js file for grade calculator-->
+    <script src="~/js/GradeCalculator.js"></script>
+</body>
+</html>
+

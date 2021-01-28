@@ -9,11 +9,13 @@
     <Folder Include="wwwroot\img\" />
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\js\" />
+    <Folder Include="Views\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Remove="wwwroot\index.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="wwwroot\index.html" />
+    <PackageReference Include="OdeToCode.UseNodeModules" Version="3.0.0" />
   </ItemGroup>
 </Project>

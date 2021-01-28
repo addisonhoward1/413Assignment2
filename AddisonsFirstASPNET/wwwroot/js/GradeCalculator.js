@@ -1,23 +1,19 @@
-﻿//declares variables
-var assignments;
-var group;
-var quiz;
-var exams;
-var intex;
-var finalgrade;
-var letter;
-var submit = document.getElementById("submitButton");
+﻿
 
-submit.addEventListener("click", function () {
+//declares variables
+var letter;
+
+$("#submitButton").click(function () {
     //gets the values from the form in the index.html file
-    assignments = parseInt(document.getElementById("assignments").value);
-    group = parseInt(document.getElementById("grouppro").value);
-    quiz = parseInt(document.getElementById("quizzes").value);
-    exams = parseInt(document.getElementById("exams").value);
-    intex = parseInt(document.getElementById("intex").value);
+
+    var assignments = parseInt($("#assignments").val());
+    var group = parseInt($("#grouppro").val());
+    var quiz = parseInt($("#quizzes").val());
+    var exams = parseInt($("#exams").val());
+    var intex = parseInt($("#intex").val());
 
     //calculates final grade
-    finalgrade = (assignments * .50) + (group * .10) + (quiz * .10) + (exams * .20) + (intex * .10);
+    var finalgrade = (assignments * .50) + (group * .10) + (quiz * .10) + (exams * .20) + (intex * .10);
 
     //if statement to find what letter grade
     if (finalgrade >= 94) {
